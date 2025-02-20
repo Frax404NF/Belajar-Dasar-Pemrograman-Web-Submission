@@ -266,12 +266,7 @@ details {
     }
 }
 
-@media screen and (min-width: 375px) {
-    .profil_image {
-      width: 200px;
-      height: 200px;
-    }
-}
+
 /*  */
 
 /* Hamburger menu */
