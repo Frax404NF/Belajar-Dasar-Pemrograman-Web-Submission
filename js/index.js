@@ -24,3 +24,20 @@ $( document ).ready(function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+  
+    toggleButton.addEventListener('click', function () {
+      navList.classList.toggle('active');
+    });
+  
+    document.addEventListener('click', function (event) {
+      const isClickInside = navList.contains(event.target) || toggleButton.contains(event.target);
+      if (!isClickInside && navList.classList.contains('active')) {
+        navList.classList.remove('active');
+      }
+    });
+  });
