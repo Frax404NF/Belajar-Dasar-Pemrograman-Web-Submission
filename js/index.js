@@ -44,22 +44,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   smoothScrollToTarget();
-  
-  // Enhanced details/summary interaction
-  document.querySelectorAll('details').forEach(detail => {
-    const summary = detail.querySelector('summary');
-    
-    summary.addEventListener('click', function(e) {
-      // Add a small delay to let the default behavior happen
-      setTimeout(() => {
-        if (detail.open) {
-          // Scroll the opened detail into view smoothly
-          detail.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest'
-          });
-        }
-      }, 100);
-    });
-  });
 });
