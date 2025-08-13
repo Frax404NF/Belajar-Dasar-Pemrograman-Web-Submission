@@ -8,8 +8,7 @@
     />
     <title>Bakoding</title>
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="icon" href="image/logo.png" type="image/x-icon" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -21,26 +20,28 @@
   </head>
   <body>
     <header class="navbar-container">
-      <div id="logo">
-        <img src="image/logo.png" alt="Koding Kuy" loading="lazy" />
+      <div class="navbar-content">
+        <div id="logo">
+          <img src="favicon.svg" alt="Bakoding - Belajar Programming" loading="lazy" />
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+
+        <nav class="nav-list">
+          <ul>
+            <li><a href="#alurBelajar">Alur Belajar</a></li>
+            <li><a href="#tipsPage">Tips & Trick</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
-        ☰
-      </button>
-
-      <nav class="nav-list">
-        <ul>
-          <li><a href="#alurBelajar">Alur Belajar</a></li>
-          <li><a href="#tipsPage">Tips & Trick</a></li>
-          <li><a href="#bagianProfil">Profil Penulis</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
       <div id="alurBelajar">
-        <section class="card">
+        <div class="card-wrapper">
+          <section class="card">
           <h1 class="sambutan">Belajar Programming</h1>
           <p class="sambutan">
             Selamat datang di halaman <span>Bakoding!</span> Pada halaman ini,
@@ -54,7 +55,7 @@
           <img
             class="featured-image"
             src="image/developer.jpg"
-            alt="developer while coding"
+            alt="Seorang developer sedang coding di laptop dengan fokus tinggi"
             loading="lazy"
           />
 
@@ -109,13 +110,14 @@
           </p>
         </section>
 
-        <section class="card">
-          <article>
-            <h1 class="frontEnd">Front End Developer</h1>
+        <div class="card-wrapper">
+          <section class="card">
+            <article>
+              <h1 class="frontEnd">Front End Developer</h1>
             <img
               class="featured-image"
               src="image/front-end-pic.jpg"
-              alt="design a web"
+              alt="Ilustrasi desain dan development website frontend"
               loading="lazy"
             />
 
@@ -166,7 +168,7 @@
 
                   <div class="roadmap">
                     <a href="https://roadmap.sh/frontend"
-                      >Front End RoadMap <br />By roadmap.sh
+                      >RoadMap <br />By roadmap.sh
                     </a>
                   </div>
                 </div>
@@ -214,7 +216,7 @@
                   <div>
                     <span>
                       <a
-                        href="https://app.sko.dev/archived/track/mulai-belajar-website-frontend"
+                        href="https://sko.dev/"
                       >
                         <img
                           class="buttonFE"
@@ -226,7 +228,7 @@
 
                   <div class="roadmap">
                     <a
-                      href="https://app.sko.dev/archived/track/mulai-belajar-website-frontend"
+                      href="https://sko.dev/"
                       >SKO.DEV</a
                     >
                   </div>
@@ -266,14 +268,16 @@
             </div>
           </div>
         </section>
+        </div>
 
-        <section class="card">
+        <div class="card-wrapper">
+          <section class="card">
           <article>
             <h1 class="backEnd">Back End Developer</h1>
             <img
               class="featured-image"
               src="image/back-end-pic.jpg"
-              alt="design a web"
+              alt="Ilustrasi arsitektur dan development website backend"
               loading="lazy"
             />
             <p class="deskripsiFB">
@@ -319,7 +323,7 @@
 
                   <div class="roadmap">
                     <a href="https://roadmap.sh/backend"
-                      >Back End RoadMap <br />By roadmap.sh
+                      >RoadMap <br />By roadmap.sh
                     </a>
                   </div>
                 </div>
@@ -354,23 +358,19 @@
             </div>
 
             <div class="cardInfo">
-              <article>
-                <article>
-                  <h2>SKO.DEV</h2>
-                  <p>
-                    SKO.DEV (dulu Sekolah Koding) adalah situs belajar coding
-                    untuk pemula dari nol dalam bahasa Indonesia. Cocok buat
-                    kamu yang mau belajar coding gratisan
-                  </p>
-                </article>
-              </article>
+              <h2>SKO.DEV</h2>
+              <p>
+                SKO.DEV (dulu Sekolah Koding) adalah situs belajar coding
+                untuk pemula dari nol dalam bahasa Indonesia. Cocok buat
+                kamu yang mau belajar coding gratisan
+              </p>
 
               <div class="bottomContainer">
                 <div class="buttonContainer">
                   <div>
                     <span>
                       <a
-                        href="https://app.sko.dev/archived/track/mulai-belajar-website-frontend"
+                        href="https://sko.dev/"
                       >
                         <img
                           class="buttonFE"
@@ -382,7 +382,7 @@
 
                   <div class="roadmap">
                     <a
-                      href="https://app.sko.dev/archived/track/mulai-belajar-website-frontend"
+                      href="https://sko.dev/"
                       >SKO.DEV</a
                     >
                   </div>
@@ -421,10 +421,12 @@
             </div>
           </div>
         </section>
+        </div>
       </div>
 
       <div id="tipsPage">
-        <section class="card">
+        <div class="card-wrapper">
+          <section class="card">
           <h1 class="tipsJudul">
             <span>Tips & Trick </span> Belajar Programming
           </h1>
@@ -432,92 +434,51 @@
           <details>
             <summary>1. Bersabar Adalah Kuncinya</summary>
             <blockquote>
-              <span
-                ><span class="tipsColor">Kesabaran</span> adalah kunci saat
-                mempelajari pemrograman. Jangan terlalu terburu-buru dalam
-                memahami konsep yang sulit.
-                <span class="tipsColor"
-                  >Setiap orang punya timeline-nya sendiri!</span
-                ></span
-              >
+              <p><span class="tipsColor">Kesabaran</span> adalah kunci saat mempelajari pemrograman. Jangan terlalu terburu-buru dalam memahami konsep yang sulit.</p>
+              <p><span class="tipsColor">Setiap orang punya timeline-nya sendiri!</span></p>
             </blockquote>
           </details>
 
           <details>
             <summary>2. Tentukan Tujuan yang Jelas</summary>
             <blockquote>
-              <span
-                >Tentukan <span class="tipsColor">tujuan</span> spesifik dalam
-                belajar pemrograman. Misalnya, ingin membuat aplikasi sederhana,
-                mempelajari bahasa pemrograman tertentu, atau bahkan
-                mempersiapkan diri untuk karir di industri IT.</span
-              >
+              <p>Tentukan <span class="tipsColor">tujuan</span> spesifik dalam belajar pemrograman. Misalnya, ingin membuat aplikasi sederhana, mempelajari bahasa pemrograman tertentu, atau bahkan mempersiapkan diri untuk karir di industri IT.</p>
             </blockquote>
           </details>
 
           <details>
             <summary>3. Pelajari Konsep Dasar Terlebih Dahulu</summary>
             <blockquote>
-              <span
-                >Sebelum melangkah lebih jauh, pastikan untuk menguasai
-                <span class="tipsColor">konsep dasar pemrograman</span>. Pahami
-                logika dasar, tipe data, pengulangan, dan struktur
-                kontrol.</span
-              >
+              <p>Sebelum melangkah lebih jauh, pastikan untuk menguasai <span class="tipsColor">konsep dasar pemrograman</span>. Pahami logika dasar, tipe data, pengulangan, dan struktur kontrol.</p>
             </blockquote>
           </details>
 
           <details>
             <summary>4. Buat Target-target Kecil</summary>
             <blockquote>
-              <span
-                >Tentukan
-                <span class="tipsColor">target-target kecil</span> yang dapat
-                dicapai secara bertahap. Misalnya, menyelesaikan tutorial
-                tertentu atau membuat program sederhana. Hal ini membantu
-                mempertahankan motivasi loh!</span
-              >
+              <p>Tentukan <span class="tipsColor">target-target kecil</span> yang dapat dicapai secara bertahap. Misalnya, menyelesaikan tutorial tertentu atau membuat program sederhana.</p>
+              <p>Hal ini membantu mempertahankan motivasi loh!</p>
             </blockquote>
           </details>
 
           <details>
             <summary>5. Jadwalkan Waktu Belajar dengan Konsistensi</summary>
             <blockquote>
-              <span
-                >Jadwalkan waktu belajar secara
-                <span class="tipsColor">rutin dan konsisten</span>. Bekerja
-                dalam jadwal yang tetap membantu membiasakan diri dengan
-                materi-materi yang dipelajari.</span
-              >
+              <p>Jadwalkan waktu belajar secara <span class="tipsColor">rutin dan konsisten</span>. Bekerja dalam jadwal yang tetap membantu membiasakan diri dengan materi-materi yang dipelajari.</p>
             </blockquote>
           </details>
 
           <details>
             <summary>6. Temukan Komunitas atau Teman Belajar</summary>
             <blockquote>
-              <span
-                >Bergabunglah dengan komunitas online atau temukan teman
-                belajar.
-                <span class="tipsColor"
-                  >Diskusi dan berbagi pengalaman dengan orang lain</span
-                >
-                dapat mempercepat pemahaman dan memberikan motivasi
-                tambahan.</span
-              >
+              <p>Bergabunglah dengan komunitas online atau temukan teman belajar. <span class="tipsColor">Diskusi dan berbagi pengalaman dengan orang lain</span> dapat mempercepat pemahaman dan memberikan motivasi tambahan.</p>
             </blockquote>
           </details>
 
           <details>
             <summary>7. Tuliskan dan Bagikan Pengetahuanmu</summary>
             <blockquote>
-              <span
-                >Saat belajar, buat catatan tentang hal-hal yang baru
-                dipelajari.
-                <span class="tipsColor">Menuliskan atau berbagi</span> di
-                platform seperti blog atau media sosial dapat membantu
-                memperkuat pemahaman dan mendorong diskusi yang
-                bermanfaat.</span
-              >
+              <p>Saat belajar, buat catatan tentang hal-hal yang baru dipelajari. <span class="tipsColor">Menuliskan atau berbagi</span> di platform seperti blog atau media sosial dapat membantu memperkuat pemahaman dan mendorong diskusi yang bermanfaat.</p>
             </blockquote>
           </details>
 
@@ -526,50 +487,9 @@
             pemrogramanmu!<span class="tipsColor"> Teruslah berlatih!!🌟</span>
           </p>
         </section>
+        </div>
       </div>
 
-      <section class="card" id="bagianProfil">
-        <div class="profil">
-          <aside class="profil_aside">
-            <img
-              class="profil_image"
-              src="image/foto_penulis.jpg"
-              alt="foto Frandi Andika"
-              loading="lazy"
-            />
-          </aside>
-
-          <div class="profil_content">
-            <div class="profil_textContainer">
-              <p class="namaPenulis">Frandi Andika</p>
-              <p>
-                Greetings! Saya adalah mahasiswa S1 teknik informatika di
-                Universitas Sam Ratulangi, <br />
-                INFJ-T, suka membaca khususnya buku self development, suka
-                hiking dan trail running, <br />
-                punya mimpi pergi ke Gunung Rinjani, Gunung Raung, dan Ranu
-                Kumbolo.
-              </p>
-
-              <div class="social-media">
-                <ul>
-                  <li>
-                    <a href="https://github.com/Frax404NF"
-                      ><i class="fab fa-github"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/frandi-andika-30a505260/"
-                      ><i class="fab fa-linkedin-in"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>

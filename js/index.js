@@ -1,34 +1,31 @@
-$(document).ready(function () {
-  $('a[href*="#"]').click(function (event) {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-      if (target.length) {
-        event.preventDefault();
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top,
-          },
-          1000,
-          function () {
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) {
-              return false;
-            } else {
-              $target.attr("tabindex", "-1");
-              $target.focus();
+function smoothScrollToTarget() {
+  document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href.includes("#")) {
+        const targetId = href.split("#")[1];
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          e.preventDefault();
+
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+
+          setTimeout(() => {
+            targetElement.focus();
+            if (!targetElement.matches(":focus")) {
+              targetElement.setAttribute("tabindex", "-1");
+              targetElement.focus();
             }
-          }
-        );
+          }, 1000);
+        }
       }
-    }
+    });
   });
-});
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.querySelector(".mobile-menu-toggle");
@@ -44,5 +41,25 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isClickInside && navList.classList.contains("active")) {
       navList.classList.remove("active");
     }
+  });
+
+  smoothScrollToTarget();
+  
+  // Enhanced details/summary interaction
+  document.querySelectorAll('details').forEach(detail => {
+    const summary = detail.querySelector('summary');
+    
+    summary.addEventListener('click', function(e) {
+      // Add a small delay to let the default behavior happen
+      setTimeout(() => {
+        if (detail.open) {
+          // Scroll the opened detail into view smoothly
+          detail.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          });
+        }
+      }, 100);
+    });
   });
 });
